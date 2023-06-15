@@ -1,0 +1,110 @@
+/* App.css */
+
+.entireSection {
+  /* background-color: lightblue; */
+  width: 1000px;
+  height: 100%;
+  /* 전체 박스를 가운데로 정렬 */
+  margin: auto;
+}
+
+.headerSection {
+  padding: 20px 0;
+}
+
+.inputSection {
+  display: flex;
+  padding: 20px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  background: lightblue;
+  display: flex;
+  /* 추가하기 버튼을 맨 오른쪽 끝에 배치하는 */
+  justify-content: space-between;
+}
+
+.inputSection span {
+  padding-right: 8px;
+  font-size: 15px;
+}
+
+.inputSection input {
+  border-radius: 0px;
+  border: 1px solid black;
+  margin-right: 20px;
+  height: 20px;
+  width: 200px;
+}
+
+.addButton {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100px;
+  height: 30px;
+}
+
+.workingSection {
+  display: flex;
+}
+
+.workingCard {
+  background-color: lightblue;
+  width: 250px;
+  height: 180px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  /* 버튼을 아래에 위치시키게 하는 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* 가운데 정렬 */
+  align-items: center;
+}
+
+.workingCard h3 {
+  margin-bottom: 0px;
+}
+
+.workingCard button {
+  margin-bottom: 20px;
+  margin-right: 10px;
+  width: 100px;
+  height: 30px;
+}
+
+.doneSection {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.doneCard {
+  background-color: lightblue;
+  width: 250px;
+  height: 180px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doneCard h3 {
+  margin-bottom: 0px;
+}
+
+.doneCard button {
+  margin-bottom: 20px;
+  margin-right: 10px;
+  width: 100px;
+  height: 30px;
+}
+
+.entireSection footer {
+  background-color: rgb(241, 241, 241);
+  position: fixed;
+  bottom: 0;
+  width: 1000px;
+  text-align: center;
+}
+ 
