@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import "./App.css";
 
 function App() {
   const [toDoList, setToDoList] = useState([
     {
-      id: 0,
+      id: uuidv4(),
       title: "리액트 공부",
       body: "리액트 기초를 공부해봅시다",
       isDone: true,
     },
     {
-      id: 1,
+      id: uuidv4(),
       title: "리액트 공부",
       body: "리액트 기초를 공부해봅시다",
       isDone: false,
@@ -31,7 +32,7 @@ function App() {
   // 추가 버튼 클릭 : 카드 추가
   const addButtonHandler = () => {
     const newToDoList = {
-      id: toDoList.length + 1,
+      id: uuidv4(),
       title,
       body,
       isDone: false,
