@@ -1,6 +1,6 @@
 /* App.css */
 
-.entireSection {
+.entire-section {
   /* background-color: lightblue; */
   width: 1000px;
   height: 100%;
@@ -8,11 +8,11 @@
   margin: auto;
 }
 
-.headerSection {
+.header-section {
   padding: 20px 0;
 }
 
-.inputSection {
+.input-section {
   display: flex;
   padding: 20px;
   margin-right: 10px;
@@ -23,12 +23,12 @@
   justify-content: space-between;
 }
 
-.inputSection span {
+.input-section span {
   padding-right: 8px;
   font-size: 15px;
 }
 
-.inputSection input {
+.input-section input {
   border-radius: 0px;
   border: 1px solid black;
   margin-right: 20px;
@@ -36,18 +36,18 @@
   width: 200px;
 }
 
-.addButton {
+.add-button {
   padding-left: 20px;
   padding-right: 20px;
   width: 100px;
   height: 30px;
 }
 
-.workingSection {
+.working-section {
   display: flex;
 }
 
-.workingCard {
+.working-card {
   background-color: lightblue;
   width: 250px;
   height: 180px;
@@ -61,23 +61,23 @@
   align-items: center;
 }
 
-.workingCard h3 {
+.working-card h3 {
   margin-bottom: 0px;
 }
 
-.workingCard button {
+.working-card button {
   margin-bottom: 20px;
   margin-right: 10px;
   width: 100px;
   height: 30px;
 }
 
-.doneSection {
+.done-section {
   display: flex;
   margin-bottom: 50px;
 }
 
-.doneCard {
+.done-card {
   background-color: lightblue;
   width: 250px;
   height: 180px;
@@ -89,18 +89,18 @@
   align-items: center;
 }
 
-.doneCard h3 {
+.done-card h3 {
   margin-bottom: 0px;
 }
 
-.doneCard button {
+.done-card button {
   margin-bottom: 20px;
   margin-right: 10px;
   width: 100px;
   height: 30px;
 }
 
-.entireSection footer {
+.entire-section footer {
   background-color: rgb(241, 241, 241);
   position: fixed;
   bottom: 0;
