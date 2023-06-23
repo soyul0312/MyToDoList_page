@@ -26,22 +26,24 @@ export const Input = ({ todos, setTodos }) => {
   const [title, setTitle] = useState("");
   const [contents, setContents] = useState("");
 
+  const handleAddTodo = (event) => {
+    event.preventDefault();
+    const newTodo = {
+      id: uuidv4(),
+      title: title,
+      contents: contents,
+      // 처음에는 모두 다 할일 목록에 넣어야 하니 false로 설정
+      isDone: false,
+    };
+    // todos.push(newTodo) = react가 감지하지 못해서 사용X
+    setTodos([...todos, newTodo]);
+
+    // 입력 필드 값 리셋
+    setTitle("");
+    setContents("");
+  };
   return (
-    <StInputBox
-      onSubmit={(event) => {
-        // 새로고침 방지 명령어
-        event.preventDefault();
-        const newTodo = {
-          id: uuidv4(),
-          title: title,
-          contents: contents,
-          // 처음에는 모두 다 할일 목록에 넣어야 하니 false로 설정
-          isDone: false,
-        };
-        // todos.push(newTodo) = react가 감지하지 못해서 사용X
-        setTodos([...todos, newTodo]);
-      }}
-    >
+    <StInputBox onSubmit={handleAddTodo}>
       <div>
         제목{" "}
         <StInput
