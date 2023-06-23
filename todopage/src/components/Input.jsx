@@ -1,47 +1,44 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-export const Input = ({ setToDoList, toDoList }) => {
+export const Input = ({ todos, setTodos }) => {
+  // 입력 필드의 초기값을 셋팅
   const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
-
-  const titleChangeHandler = (event) => {
-    setTitle(event.target.value);
-  };
-
-  const bodyChangeHandler = (event) => {
-    setBody(event.target.value);
-  };
-
-  const addButtonHandler = () => {
-    const newToDoList = {
-      id: uuidv4(),
-      title,
-      body,
-      isDone: false,
-    };
-
-    // 불변성 유지하며 ToDoList 추가
-    setToDoList([...toDoList, newToDoList]);
-
-    // 입력 필드 초기화
-    setTitle("");
-    setBody("");
-
-    alert("추가 완료!");
-  };
+  const [contents, setContents] = useState("");
 
   return (
-    <section className="input-section">
-      <div>
-        <span>제목&nbsp;</span>
-        <input value={title} onChange={titleChangeHandler} />
-        <span>내용&nbsp;</span>
-        <input value={body} onChange={bodyChangeHandler} />
-      </div>
-      <button className="add-button" onClick={addButtonHandler}>
-        추가하기
-      </button>
-    </section>
+    <div>
+      <form
+        onSubmit={(event) => {
+          // 새로고침 방지 명령어
+          event.preventDefault();
+          const newTodo = {
+            id: uuidv4(),
+            title: title,
+            contents: contents,
+            // 처음에는 모두 다 할일 목록에 넣어야 하니 false로 설정
+            isDone: false,
+          };
+          // todos.push(newTodo) = react가 감지하지 못해서 사용X
+          setTodos([...todos, newTodo]);
+        }}
+      >
+        제목{" "}
+        <input
+          value={title}
+          onChange={(event) => {
+            setTitle(event.target.value);
+          }}
+        />
+        내용{" "}
+        <input
+          value={contents}
+          onChange={(event) => {
+            setContents(event.target.value);
+          }}
+        />
+        <button>추가하기</button>
+      </form>
+    </div>
   );
 };
